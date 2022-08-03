@@ -3176,7 +3176,7 @@ if (@$exKeywords) $keywords = $keywords . "," . $exKeywords;
                         <div class="sidebar-info-contents">
                             <div class="content-inner">
                                 <div class="logo">
-                                    <a href=""><img src="images/logo.png" alt="" /></a>
+                                    <a href=""><img src="images/logo<?= $plang ?>.png" alt="" /></a>
                                 </div>
                                 <div class="content-box">
                                     <h4><?= getTitle("about" . $plang) ?></h4>
@@ -3238,7 +3238,7 @@ if (@$exKeywords) $keywords = $keywords . "," . $exKeywords;
                 <div class="container">
                     <div class="outer-box clearfix">
                         <div class="logo-box">
-                            <figure class="logo"><a href=""><img src="images/logo.png" alt=""></a></figure>
+                            <figure class="logo"><a href=""><img src="images/logo<?= $plang ?>.png" alt=""></a></figure>
                         </div>
                         <div class="menu-area pull-right">
                             <!--Mobile Navigation Toggler-->
@@ -3354,7 +3354,15 @@ if (@$exKeywords) $keywords = $keywords . "," . $exKeywords;
                 $style = $news["image"];
                 $date = getDateTime($news["date"], $lang);
             }  ?>
+            <style>
+                .tittle.wow.fadeInUp {
+                    display: block;
+                }
 
+                .col-md-12.pull-rightt {
+                    margin-top: 0;
+                }
+            </style>
             <section class="page-title">
                 <div class="auto-container">
                     <div class="content-box">
@@ -3370,6 +3378,9 @@ if (@$exKeywords) $keywords = $keywords . "," . $exKeywords;
                                 <li><?= $pageTitle ?></li>
                             </ul>
                         </div>
+                        <?php if ($news) { ?>
+                            <span style="    display: block;
+    color: #ffba00;"><?= $date[0] ?>, <?= $date[1] ?> <?= $date[2] ?></span> <? } ?>
                     </div>
                 </div>
             </section>
