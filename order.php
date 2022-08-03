@@ -96,9 +96,11 @@ if (@$_POST["btnSubmit"]) {
         <?= $contactmessage ?>
       </div>
 
-
-
       <div class="col-md-12 pull-rightt">
+        <?= getValue("body_order", $lang) ?>
+      </div>
+
+      <div class="col-md-12 pull-rightt2">
 
 
         <!-- Contact Form -->

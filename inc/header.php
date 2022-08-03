@@ -3030,6 +3030,112 @@ if (@$exKeywords) $keywords = $keywords . "," . $exKeywords;
             font-weight: bold;
         }
     </style>
+    <style>
+        .first-footer .cmt-footer-cta-wrapper {
+            position: inherit;
+        }
+
+        .page-title .content-box h1 {
+
+            font-size: 29px;
+
+        }
+
+        .main-menu .navigation>li>ul>li>a,
+        .main-menu .navigation>li>.megamenu li>a {
+            font-size: 14px;
+        }
+
+        .service-sidebar .sidebar-categories .categories-list li a {
+            font-size: 15px;
+        }
+
+        figure.image-box img {
+            max-height: 400px;
+        }
+
+        .page-title {
+
+            padding: 43px 0px;
+
+            padding-top: 180px;
+        }
+
+        figure {
+            margin: 0px;
+            text-align: center;
+        }
+
+        @media only screen and (max-width: 767px) {
+            .page-title {
+                padding: 15px 0px;
+                /* padding-top: 15px; */
+            }
+
+            .container .videos {
+                padding: 10px 0 0px 0px;
+            }
+
+            .play-btn {
+                position: absolute;
+                top: 30%;
+                right: 25%;
+                width: 25px;
+            }
+
+            .container .videos a {
+                margin: 5px;
+                height: 75px;
+            }
+        }
+
+        .subtittle,
+        .tittle {
+            position: relative;
+            display: block;
+            padding-bottom: 19px;
+            margin-bottom: 33px;
+            display: block;
+            text-align: <?= plang("right", "left") ?>;
+        }
+
+        .subtittle h2,
+        .tittle h2 {
+            position: relative;
+            display: block;
+            font-size: 30px;
+            line-height: 40px;
+            font-weight: 500;
+            color: #242424;
+            margin-bottom: 0px;
+            margin: 0;
+        }
+
+        .subtittle:before,
+        .tittle:before {
+            background-image: url(images/icons/line-4.png);
+            position: absolute;
+            <?= plang("right", "left") ?>: 0px;
+            bottom: 0px;
+            width: 62px;
+            height: 9px;
+            background-repeat: no-repeat;
+            background-color: transparent;
+        }
+
+        p {
+            margin-bottom: 10px;
+        }
+
+        .col-md-12.pull-rightt,
+        body>div.boxed_wrapper>section.about-company.wow.animated>div>div:nth-child(3) {
+            margin-top: 30px;
+        }
+
+        div#slides .subtittle {
+            display: none;
+        }
+    </style>
     <script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=61658e724564d200122a7ddf&product=sop' async='async'></script>
 
 </head>
@@ -3248,25 +3354,27 @@ if (@$exKeywords) $keywords = $keywords . "," . $exKeywords;
                 $style = $news["image"];
                 $date = getDateTime($news["date"], $lang);
             }  ?>
-            <style>
-                .first-footer .cmt-footer-cta-wrapper {
-                    position: inherit;
-                }
 
-                .page-title .content-box h1 {
+            <section class="page-title">
+                <div class="auto-container">
+                    <div class="content-box">
+                        <div class="content-wrapper">
+                            <!-- <div class="title">
+                                <h1><?= $pageTitle ?></h1>
+                            </div> -->
+                            <ul class="bread-crumb clearfix">
+                                <li><a href="index<?= $plang ?>.php"><?= getTitle("index" . $plang) ?></a></li>
+                                <? if ($id) { ?>
+                                    <li><a href="#"><?= getTitle($name) ?></a></li>
+                                <? } ?>
+                                <li><?= $pageTitle ?></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-                    font-size: 29px;
-
-                }
-
-                .page-title {
-
-                    padding: 43px 0px;
-
-                    padding-top: 180px;
-                }
-            </style>
-            <section class="page-title centred" style="background-image: url(images/page-title.jpg);">
+            <!-- <section class="page-title centred" style="background-image: url(images/page-title.jpg);">
                 <div class="auto-container">
                     <div class="content-box">
                         <div class="title">
@@ -3291,7 +3399,7 @@ if (@$exKeywords) $keywords = $keywords . "," . $exKeywords;
                         </div>
                     <?php } ?>
                 </div>
-            </section>
+            </section> -->
 
         <?php }
         ?>

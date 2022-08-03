@@ -34,7 +34,7 @@ if ($id && !$products[0]["level"]) {
     }
 
     .service-details-content .upper-box .text p {
-        font-size: 18px;
+        font-size: 15px;
         font-weight: normal;
         color: #5a5a68;
         margin-bottom: 25px;
